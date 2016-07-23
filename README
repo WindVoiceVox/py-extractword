@@ -14,7 +14,7 @@ Usage
 >>> sentence.analysis_text(u"第二次世界大戦について")
 >>> words = sentence.get_words()
 >>> for word in words:
-...     print word
+...     print( word )
 ... 
 第二次
 世界
