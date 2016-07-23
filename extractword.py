@@ -41,13 +41,15 @@ class Sentence(object):
         words = self.words
         CURRENT = -1
         BEFORE = -2
-        res = self.mecab.parseToNode(text.encode("utf-8"))
+        # res = self.mecab.parseToNode(text.encode("utf-8"))
+        res = self.mecab.parseToNode(text)
         while res:
             if res.surface == '':
                 res = res.next
                 continue
 
-            words.append(Word(unicode(res.surface), unicode(res.feature)))
+            #words.append(Word(unicode(res.surface), unicode(res.feature)))
+            words.append(Word(str(res.surface), str(res.feature)))
 
             if len(words) > 1:
                 rules = []
