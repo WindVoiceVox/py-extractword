@@ -69,4 +69,4 @@ if __name__ == "__main__":
     sentence.analysis_text(text)
     words = sentence.get_words()
     for word in words:
-        print word
+        print( word )
