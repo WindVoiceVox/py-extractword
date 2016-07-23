@@ -48,7 +48,8 @@ class TestSentence(unittest.TestCase):
             Word(u'世界', u'名詞,一般,*,*,*,*,世界,セカイ,セカイ', False),
             Word(u'大戦', u'名詞,一般,*,*,*,*,大戦,タイセン,タイセン', False),
         ]
-        for i in xrange(len(words)):
+        # for i in xrange(len(words)):
+        for i in range(len(words)):
             self.assertEqual(self.sentence.words[i].surface, words[i].surface)
             self.assertEqual(self.sentence.words[i].feature, words[i].feature)
             self.assertEqual(self.sentence.words[i].connect, words[i].connect)
@@ -60,7 +61,8 @@ class TestSentence(unittest.TestCase):
             u'大戦',
         ]
         result = self.sentence.get_words()
-        for i in xrange(len(words)):
+        # for i in xrange(len(words)):
+        for i in range(len(words)):
             self.assertEqual(result[i], words[i])
 
 if __name__ == '__main__':
